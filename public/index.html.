@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <style>
+      body {
+        text-align: center;
+        padding: 4em;
+        font-family: serif;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Emily & Chris</h1>
+    <p>Are getting married... details soon.</p>
+  </body>
+</html>
