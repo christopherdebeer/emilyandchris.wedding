@@ -1,6 +1,11 @@
+@import url(https://fonts.googleapis.com/css?family=Open+Sans:400,600);
+
+html {
+  font-family: 'Open Sans', sans-serif;
+}
+
 body {
   text-align: center;
-  font-family: serif;
   max-width: 900px;
   display: block;
   margin: 0 auto;
@@ -22,7 +27,7 @@ body {
 }
 
 .nav {
-  border-bottom: 2px solid #ccc;
+  border-bottom: 2px solid #727272;
   margin-bottom: 3em;
 }
 
@@ -44,6 +49,35 @@ body {
 
 #content {
   padding: 2em;
+}
+
+h1 {
+  color: #464040;
+  position: relative;
+  display: inline-block;
+  box-sizing: border-box;
+  padding: 0 2em;
+}
+
+h1:before,
+h1:after {
+  content: '.';
+  text-indent: -9999em;
+  overflow: hidden;
+  width: 1.3em;
+  height: 1.3em;
+  position: absolute;
+}
+
+h1:before {
+  left: 0;
+  background: url("../images/leftleaves.png") center center no-repeat transparent;
+  background-size: contain;
+}
+h1:after {
+  right: 0;
+  background: url("../images/rightleaves.png") center center no-repeat transparent;
+  background-size: contain;
 }
 
 @media (max-width: 850px) {
