@@ -22,8 +22,17 @@ body {
   margin: 0 auto;
 }
 
+.header {
+  max-height: 40vh;
+  min-height: 200px;
+  width: auto;
+}
+
 .footer {
   margin-bottom: 3em;
+  max-height: 30vh;
+  min-height: 200px;
+  width: auto;
 }
 
 .nav {
@@ -87,7 +96,7 @@ h1:after {
   }
 }
 
-@media (max-width: 400px) {
+@media (max-width: 450px) {
   .nav {
     position: relative;
   }
@@ -119,3 +128,4 @@ h1:after {
     left: auto;
   }
 }
+
