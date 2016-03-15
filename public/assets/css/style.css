@@ -18,16 +18,24 @@ body {
 }
 .nav {
   border-bottom: 2px solid #ccc;
-  border-top: 2px solid #ccc;
-  margin: 2em 0;
 }
 
 .nav a {
   color: #3C7530;
   text-decoration: none;
-}
-.nav span {
   padding: 1em;
   font-size: 1.2em;
   display: inline-block;
+}
+
+@media (max-width: 850px) {
+  .nav a {
+    width: 33%;
+  }
+}
+
+@media (max-width: 320px) {
+  .nav a {
+    width: 100%;
+  }
 }
