@@ -12,7 +12,8 @@ body {
 .savethedate,
 .footer {
   display: block;
-  max-width: 100%;
+  max-width: 600px;
+  margin: 0 auto;
 }
 .nav {
   border-bottom: 2px solid #ccc;
