@@ -42,6 +42,10 @@ body {
   display: none;
 }
 
+#content {
+  padding: 2em;
+}
+
 @media (max-width: 850px) {
   .nav span {
     font-size: 1.1em;
