@@ -102,6 +102,7 @@ h1:after {
   border: 0 none;
   height: 800px;
   width: 100%;
+  border: 0 none;
 }
 
 @media (max-width: 840px) {
