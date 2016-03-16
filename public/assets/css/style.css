@@ -97,6 +97,13 @@ h1:after {
   background-size: contain;
 }
 
+.form {
+  display: block;
+  border: 0 none;
+  height: 800px;
+  width: 100%;
+}
+
 @media (max-width: 840px) {
   .nav span {
     width: 30%;
