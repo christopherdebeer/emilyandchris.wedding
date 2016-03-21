@@ -57,7 +57,7 @@ app.post('/rsvp', function (req, res) {
 		});
 	});
   });
-  res.send('ok');
+  res.redirect('/thankyou');
 });
 
 app.listen(PORT);
