@@ -48,7 +48,7 @@ app.use(express.static( './public', {
 
 app.post('/rsvp', function (req, res) {
 
-  var data = {"item1": "test"}
+  var data = req.body;
   setAuth( function(){
 	getInfoAndWorksheets(function(err,info){
 		console.log("Error getting worksheets!", err)
