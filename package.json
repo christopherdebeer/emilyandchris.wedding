@@ -1,0 +1,26 @@
+{
+  "name": "emilyandchris.wedding",
+  "version": "0.0.1",
+  "description": "wedding site",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/christopherdebeer/emilyandchris.wedding.git"
+  },
+  "author": "Christopher de Beer",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/christopherdebeer/emilyandchris.wedding/issues"
+  },
+  "homepage": "https://github.com/christopherdebeer/emilyandchris.wedding#readme",
+  "dependencies": {
+    "body-parser": "^1.15.0",
+    "express": "^4.13.4",
+    "google-spreadsheet": "^2.0.0"
+  }
+}
+
