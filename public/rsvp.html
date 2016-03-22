@@ -5,6 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" type="text/css" href="assets/css/style.css">
     <script   src="https://code.jquery.com/jquery-2.2.1.min.js"   integrity="sha256-gvQgAFzTH6trSrAWoH1iPo9Xc96QxSZ3feW6kem+O00="   crossorigin="anonymous"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.2/css/select2.min.css" rel="stylesheet" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.2/js/select2.min.js"></script>
   </head>
   <body>
 
@@ -23,19 +25,53 @@
     <div id="content">
       <h1>RSVP / Contact Us</h1>
 
-      <p>Liquorice lollipop tootsie roll jelly-o carrot cake cake. Apple pie topping jelly soufflé cheesecake pastry macaroon brownie cheesecake. Tart cake icing gummies tootsie roll. Icing macaroon dessert brownie jelly marzipan marzipan macaroon cupcake.</p>
+      <div class="container">
+        <p>Liquorice lollipop tootsie roll jelly-o carrot cake cake. Apple pie topping jelly soufflé cheesecake pastry macaroon brownie cheesecake. Tart cake icing gummies tootsie roll. Icing macaroon dessert brownie jelly marzipan marzipan macaroon cupcake.</p>
 
       <form action="/rsvp" method="post">
 
-	<input type="text" name="name" placeholder="Your Name" />
-	<input type="email" name="email" placeholder="Email Address" />
-	<input type="text" name="attending" placeholder="Attending?" />
-	<input type="text" name="requirements" placeholder="Any unusual requirements? (Dietary or otherwise)" />
-	<input type="submit" value="Submit" />
+        <select>
+          <option>Aye!</option>
+          <option>No</option>
+        </select>
+        I/We 
+        <input type="text" name="name" placeholder="Your Name(s)" />
+        <br/>Will definitely be
+        <select name="attending">
+          <option>Poping by</option>
+          <option>Missing</option>
+          <option>Attending</option>
+          <option>Avoiding</option>
+        </select>
+        because we are
+        <select>
+          <option>Awesome</option>
+          <option>Losers</option>
+          <option>Desparate</option>
+          <option>Busy</option>
+          <option>Scared to say no</option>
+        </select>
+        <br/>Our/my dietry requirements are
+        <select name="requirements">
+          <option>Pretty weird</option>
+          <option>Totally normal</option>
+          <option>Embarassing</option>
+        </select>
+        because I'm
+        <select name="">
+          <option>Special</option>
+          <option>Vegetarian</option>
+          <option>Vegan</option>
+          <option>Fussy</option>
+        </select>
+        <br/>Also
+        <input type="text" placeholder="Personal note"/>
+        <input type="submit" value="Submit" />
 
       </form>
       <p>Muffin toffee topping liquorice pastry bonbon brownie donut croissant. Muffin candy topping tart sesame snaps. Gingerbread bear claw macaroon pastry wafer cookie soufflé fruitcake. Liquorice lollipop tootsie roll jelly-o carrot cake cake. Apple pie topping jelly soufflé cheesecake pastry macaroon brownie cheesecake. Tart cake icing gummies tootsie roll. Icing macaroon dessert brownie jelly marzipan marzipan macaroon cupcake.</p>
       </div>
+    </div>
 
     <img class="footer" src="assets/images/footer.png"></img>
 
