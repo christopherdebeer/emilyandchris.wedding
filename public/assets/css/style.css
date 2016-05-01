@@ -30,6 +30,10 @@ body {
   width: auto;
 }
 
+.nav span a.todo {
+  color: #e8e7e1;
+}
+
 .footer {
   margin-bottom: 3em;
   max-height: 30vh;
@@ -65,7 +69,7 @@ body {
 
 #content {
   padding: 2em;
-  background-color: white;
+  background-color: rgba(255,255,255,0.8);
 }
 
 .container {
@@ -105,7 +109,12 @@ h1:after {
 
 form {
   line-height: 3em;
+  display: block;
+  max-width: 35em;
+  margin: 0 auto;
+  padding: 2em 0;
 }
+
 form input {
   border: 0 none;
   border-bottom: 1px solid black;
@@ -122,7 +131,75 @@ form input[type="submit"] {
   border: 0 none;
   border-radius: 3px;
   padding: 0.25em 2em;
+  margin-top: 2em;
 }
+
+form label {
+  display:block;
+  clear: both;
+  margin-bottom: 1em;
+}
+
+form label #name {
+  display: block;
+  width: 100%;
+}
+
+form label.num input { width: 2em; }
+form .num {
+  margin-bottom: 0;
+}
+
+form label input[type="radio"] {
+  float: left;
+  height: 2em;
+  margin-right: 1em;
+}
+
+form .center {
+  text-align: center;
+  line-height: 2em;
+  margin-top: 2em;
+}
+
+form .center label {
+  display: inline-block;
+  margin: 0;
+}
+
+form .center label input {
+  height: auto;
+  float: none;
+  margin: 0 0.5em 0 0;
+}
+
+textarea {
+  display: none;
+  width: 100%;
+  padding: 0.6em;
+  border: 1px solid black;
+  height: 3em;
+  font-size: 1em;
+  margin-top: 1em;
+}
+
+
+form label span {
+  display: block;
+  height: 1.5em;
+  line-height: 1.2em;
+}
+
+form label .main {
+  text-transform: uppercase;
+  font-weight: bold;
+}
+
+.willAttend, .willNotAttend {
+  margin-left: 5vw;
+}
+
+.notAttending textarea { display: none; }
 
 @media (max-width: 840px) {
   .nav span {

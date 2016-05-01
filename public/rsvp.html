@@ -13,14 +13,14 @@
     <div class="nav">
       <span><a href="/">Home</a></span>
       <span class="current"><a href="rsvp">RSVP / Contact Us</a></span>
-      <span><a href="thebigday">The Big Day</a></span>
-      <span><a href="travel">Travel</a></span>
-      <span><a href="accomodation">Accomodation</a></span>
-      <span><a href="thingstodo">Things To Do</a></span>
+      <span><a href="#thebigday" class="todo" title="Details coming soon...">The Big Day</a></span>
+      <span><a href="#travel" class="todo" title="Details coming soon...">Travel</a></span>
+      <span><a href="#accomodation" class="todo" title="Details coming soon...">Accomodation</a></span>
+      <span><a href="#thingstodo" class="todo" title="Details coming soon..." >Things To Do</a></span>
       <div class="expander">&#9776;</div>
     </div>
 
-    <a href="/"><img class="header" src="assets/images/header.png"></img></a>
+    <!-- <a href="/"><img class="header" src="assets/images/header.png"></img></a> -->
 
     <div id="content">
       <h1>RSVP / Contact Us</h1>
@@ -28,49 +28,47 @@
       <div class="container">
         <p>Liquorice lollipop tootsie roll jelly-o carrot cake cake. Apple pie topping jelly soufflé cheesecake pastry macaroon brownie cheesecake. Tart cake icing gummies tootsie roll. Icing macaroon dessert brownie jelly marzipan marzipan macaroon cupcake.</p>
 
-      <form action="/rsvp" method="post">
+      	<form action="/rsvp" method="post">
+		
+		<label class="name"><input type="text" id="name" name="name" placeholder="Name(s)" /></label>
+		<label>	<input type="radio" name="attending" value="yes" class="willAttend"/><span class="main">Will Attend</span><span>with bells on</span></label>
+		<label><input type="radio" name="attending" value="yes" class="willAttend" /><span class="main">Will Attend</span><span>undecided on bells</span></label>
+		<label><input type="radio" name="attending" value="no" class="willNotAttend"/><span class="main">Will Not Attend</span><span>heard there will be people wearing bells</span></label>
+		<label><input type="radio" name="attending" value="no"  class="willNotAttend" /><span class="main">Will Not Attend</span><span>regardless of bells controversy</span></label>
 
-        <select>
-          <option>Aye!</option>
-          <option>No</option>
-        </select>
-        I/We 
-        <input type="text" name="name" placeholder="Your Name(s)" />
-        <br/>Will definitely be
-        <select name="attending">
-          <option>Poping by</option>
-          <option>Missing</option>
-          <option>Attending</option>
-          <option>Avoiding</option>
-        </select>
-        because we are
-        <select>
-          <option>Awesome</option>
-          <option>Losers</option>
-          <option>Desparate</option>
-          <option>Busy</option>
-          <option>Scared to say no</option>
-        </select>
-        <br/>Our/my dietry requirements are
-        <select name="requirements">
-          <option>Pretty weird</option>
-          <option>Totally normal</option>
-          <option>Embarassing</option>
-        </select>
-        because I'm
-        <select name="">
-          <option>Special</option>
-          <option>Vegetarian</option>
-          <option>Vegan</option>
-          <option>Fussy</option>
-        </select>
-        <br/>Also
-        <input type="text" placeholder="Personal note"/>
-        <input type="submit" value="Submit" />
+		<div class="ifAttending">
+			<label class="num">Please save us <input type="number" id="number" name="number" /> seats.</label>
+			<label class="music" for="music">
+				I/We promise to dance if you play
+				<input type="text" id="music" name="music" />
+			</label>
+			
+			<div class="center">
+				<span>Dietary requirements:</span>
+				<label class="inline"><input type="radio" name="requirements" value="meat" class="requirements">Meat</label>
+				<label class="inline" ><input type="radio" name="requirements" value="vegetarian" class="requirements">Vegetarian</label>
+				<label class="inline" ><input type="radio" name="requirements" value="complicated" class="requirements complicated">It's complicated</label>
 
-      </form>
-      <p>Muffin toffee topping liquorice pastry bonbon brownie donut croissant. Muffin candy topping tart sesame snaps. Gingerbread bear claw macaroon pastry wafer cookie soufflé fruitcake. Liquorice lollipop tootsie roll jelly-o carrot cake cake. Apple pie topping jelly soufflé cheesecake pastry macaroon brownie cheesecake. Tart cake icing gummies tootsie roll. Icing macaroon dessert brownie jelly marzipan marzipan macaroon cupcake.</p>
-      </div>
+				<textarea name="requirementsextra" placeholder="Tell us all about it..."></textarea>
+			</div>
+
+
+			<div class="center">
+				<span>I/We are most agreeable when consuming:</span><br/>
+				<label class="inline"><input type="checkbox" name="beer" value="yes" class="requirements">Beer</label>
+				<label class="inline" ><input type="checkbox" name="redwine" value="yes" class="requirements">Red wine</label>
+				<label class="inline" ><input type="checkbox" name="whitewine" value="yes" class="requirements">White wine</label>
+				<label class="inline" ><input type="checkbox" name="cider" value="yes" class="requirements">Cider</label>
+			</div>
+		</div>
+		<div class="notAttending">
+			<label>
+				<textarea name="message" placeholder="Optional message"></textarea>
+			</label>
+		</div>
+
+		<input type="submit" value="Submit" />
+	</form>
     </div>
 
     <img class="footer" src="assets/images/footer.png"></img>

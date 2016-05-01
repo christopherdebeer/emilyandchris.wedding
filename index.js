@@ -29,6 +29,7 @@ function getInfoAndWorksheets(callback) {
 
 function addRow(data, callback) {
 	console.log("adding row");
+	data.time = (new Date()).toString()
 	doc.addRow(1, data, callback);
 }
 
