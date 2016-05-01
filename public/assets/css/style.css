@@ -13,6 +13,11 @@ body {
   background-size: 30em 30em; 
 }
 
+a {
+  color: #464040;
+  font-weight: bold;
+}
+
 .header,
 .weregettingmarried,
 .date,
@@ -25,7 +30,7 @@ body {
 }
 
 .header {
-  max-height: 40vh;
+  max-height:30vh;
   min-height: 200px;
   width: auto;
 }
@@ -36,15 +41,15 @@ body {
 
 .footer {
   margin-bottom: 3em;
-  max-height: 30vh;
-  min-height: 200px;
+  max-height: 15vh;
+  min-height: 150px;
   width: auto;
 }
 
 .nav {
   background-color: white;
   border-bottom: 2px solid #464040;
-  margin-bottom: 3em;
+  margin-bottom: 0em;
 }
 
 .nav span {
@@ -76,6 +81,35 @@ body {
   text-align: left;
 }
 
+.home { text-align: center; }
+
+.col {
+  float: left;
+  width: 50%;
+  box-sizing: border-box;
+}
+
+.col:nth-child(1) {
+  padding-right: 2em;
+  border-right :1px solid #464040;
+}
+.col:nth-child(2) {
+  padding-left: 2em;
+}
+
+.sub {
+  font-size: 0.8em;
+  font-style: italic;
+}
+
+.sub:before {
+  content: "("
+}
+
+.sub:after {
+  content: ")"
+}
+
 h1 {
   color: #464040;
   position: relative;
@@ -100,6 +134,7 @@ h1:before {
   background: url("../images/leftleaves.png") center center no-repeat transparent;
   background-size: contain;
 }
+
 h1:after {
   right: 0;
   background: url("../images/rightleaves.png") center center no-repeat transparent;
@@ -108,9 +143,8 @@ h1:after {
 
 
 form {
-  line-height: 3em;
+  line-height: 1em;
   display: block;
-  max-width: 35em;
   margin: 0 auto;
   padding: 2em 0;
 }
@@ -126,7 +160,6 @@ form input[type="submit"] {
   background-color: green;
   color: white;
   display: block;
-  margin: 0 auto;
   cursor: pointer;
   border: 0 none;
   border-radius: 3px;
@@ -152,22 +185,28 @@ form .num {
 
 form label input[type="radio"] {
   float: left;
-  height: 2em;
-  margin-right: 1em;
+  height: 1.5em;
 }
 
 form .center {
-  text-align: center;
-  line-height: 2em;
-  margin-top: 2em;
+  line-height: 1.5em;
+  margin-bottom: 2em;
 }
 
 form .center label {
+  margin-right :1em;
+}
+
+form .col {
+  margin-bottom :2em;
+
+}
+form .inline {
   display: inline-block;
   margin: 0;
 }
 
-form .center label input {
+form .inline input {
   height: auto;
   float: none;
   margin: 0 0.5em 0 0;
@@ -181,6 +220,7 @@ textarea {
   height: 3em;
   font-size: 1em;
   margin-top: 1em;
+  box-sizing: border-box;
 }
 
 
@@ -195,16 +235,28 @@ form label .main {
   font-weight: bold;
 }
 
-.willAttend, .willNotAttend {
-  margin-left: 5vw;
-}
 
 .notAttending textarea { display: none; }
+
+.attendingSelection {
+  margin-top: 1em;
+}
 
 @media (max-width: 840px) {
   .nav span {
     width: 30%;
     vertical-align: middle;
+  }
+
+  .col {
+    float: none;
+    width: 100%;
+    padding: 0 !important;
+    border: 0 none !important;
+  }
+
+  input[type="submit"] {
+    margin: 0 auto;
   }
 }
 
@@ -255,5 +307,7 @@ form label .main {
     min-height: 100px;
     width: auto;
   }
+
+
 }
 
