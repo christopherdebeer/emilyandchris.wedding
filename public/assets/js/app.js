@@ -29,14 +29,16 @@ $('form .requirements').on( 'change', function(ev){
 
 
 function outstandingInputs() {
-	var name = $('input[name="name"').val();
-	var attending = $('input[name="attending"').val().slice(0,3);
+	var name = $('input[name="name"]').val();
+	var attending = $('input[name="attending"]:checked').val().slice(0,3);
 	var email = $('input[name="email"]').val()
 	var outstanding = []
 
 	if (name === "") outstanding.push('Name(s)')
 	if (attending === "yes" && email === "") outstanding.push('Email')
 	if (!window.allowSubmit) outstanding.push('Attending')
+
+	console.log( outstanding, name, attending, email, window.allowSubmit )
 
 	return outstanding;
 }
