@@ -7,8 +7,8 @@ $('.nav .expander').on( 'click', function(ev){
 
 
 $('form').submit(function(ev){
-	if (!formCompleted()) {
-		alert("Oops! It looks like you havn't completed the RSVP form.")
+	if (outstandingInputs().length > 0) {
+		alert("Oops! It looks like you havn't completed the RSVP form. Missing: " + outstandingInputs().join(', ') )
 		ev.preventDefault();
 		return false;
 	}
@@ -16,8 +16,9 @@ $('form').submit(function(ev){
 
 
 $('form input[name="attending"]').on( 'change', function(ev){
-	$('.ifAttending').toggle( $(this).val() === "yes" );
-	$('.notAttending textarea').toggle( $(this).val() === "no" );
+	var attending = $(this).val().slice(0,3) === "yes"
+	$('.ifAttending').toggle( attending );
+	$('.notAttending textarea').toggle( !attending );
 	window.allowSubmit = true;
 
 });
@@ -27,9 +28,15 @@ $('form .requirements').on( 'change', function(ev){
 });
 
 
-function formCompleted() {
+function outstandingInputs() {
 	var name = $('input[name="name"').val();
 	var attending = $('input[name="attending"').val();
-	console.log(name, attending)
-	return ( name !== "" && window.allowSubmit);
+	var email = $('input[name="email"]').val()
+	var outstanding = []
+
+	if (name === "") outstanding.push('Name(s)')
+	if (email === "") outstanding.push('Email')
+	if (!window.allowSubmit) outstanding.push('Attending')
+
+	return outstanding;
 }
