@@ -13,9 +13,34 @@ body {
   background-size: 30em 30em; 
 }
 
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Amatic SC', cursive;
+}
+
+h2, h3, h4, h5, h6 {
+  font-family: 'Kurale', serif;
+}
+
+h2 {
+  font-size: 1.75em;
+}
+
+h3 {
+  font-size: 1.5em;
+}
+
+h4, h5, h6 {
+  font-size: 1.35em;
+}
+
 a {
   color: #464040;
   font-weight: bold;
+}
+
+
+li {
+  word-break: break-word;
 }
 
 .header,
@@ -54,9 +79,10 @@ a {
 
 .nav span {
   box-sizing: border-box;
-  padding: 1em 0.5em;
-  font-size: 1.2em;
+  padding: 0.5em 0.75em;
+  font-size: 1.75em;
   display: inline-block;
+  font-family: 'Amatic SC', cursive;
 }
 
 .nav span a {
@@ -265,7 +291,7 @@ form label .main {
     position: relative;
   }
   .nav span {
-    font-size: 1em;
+    font-size: 1.75em;
     width: 100%;
     display: none;
   }
@@ -309,5 +335,50 @@ form label .main {
   }
 
 
+}
+
+.intro {
+  font-family: 'Kurale', serif;
+  font-weight: normal;
+  font-size: 1.5em;
+  line-height: 1.2em;
+  font-style: italic;
+  color: #2f6623;
+}
+
+
+.signed {
+  font-family: serif;
+  font-style: italic;
+}
+
+
+.thebigday .venue {
+  overflow: auto;
+}
+.thebigday .venue .map {
+  width: 60%;
+  float: right;
+  margin-top: -5em;
+}
+
+
+@media (max-width: 650px) {
+
+  .intro {
+    font-family: 'Kurale', serif;
+    font-weight: normal;
+    font-size: 1.25em;
+    line-height: 1.1em;
+    font-style: italic;
+    color: #2f6623;
+}
+
+  .thebigday .venue .map {
+    width: auto;
+    max-width: 100%;
+    margin-top: 0;
+    float: none;
+  }
 }
 
