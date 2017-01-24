@@ -43,6 +43,10 @@ li {
   word-break: break-word;
 }
 
+.hide {
+  display: none;
+}
+
 .header,
 .weregettingmarried,
 .date,

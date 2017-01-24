@@ -33,58 +33,66 @@
 
         <form action="/rsvp" method="post">
         
-        <div class="col">
-            <label class="name"><input type="text" id="name" name="name" placeholder="Name(s)" /></label>
-            <div class="ifAttending">
-                <label class="email"><input type="email" id="email" name="email" placeholder="Email Address"/></label>
-                <label class="num">Please save us <input type="number" id="number" name="number" /> seats.</label>
-            </div>
-
-            <div class="attendingSelection">
-                <label><input type="radio" name="attending" value="yes, with bells on" class="willAttend"/><span class="main">Will Attend</span><span class="sub">with bells on!</span></label>
-                <label><input type="radio" name="attending" value="yes, undecided on bells" class="willAttend" /><span class="main">Will Attend</span><span class="sub">undecided on bells</span></label>
-                <label><input type="radio" name="attending" value="no, heard there'd be bells" class="willNotAttend"/><span class="main">Will Not Attend</span><span class="sub">heard there will be people wearing bells</span></label>
-                <label><input type="radio" name="attending" value="no, but ringing my bell"  class="willNotAttend" /><span class="main">Will Not Attend</span><span class="sub">will be ringing my bell from afar</span></label>
-            </div>
-        </div>
-
-        <div class="col">
-            <div class="ifAttending">
-                
-                <div class="center">
-                    <span>Dietary requirements:</span><br/>
-                    <label class="inline"><input type="radio" name="requirements" value="meat" class="requirements">Meat</label>
-                    <label class="inline" ><input type="radio" name="requirements" value="vegetarian" class="requirements">Vegetarian</label>
-                    <label class="inline" ><input type="radio" name="requirements" value="complicated" class="requirements complicated">It's complicated</label>
-
-                    <textarea name="requirementsextra" placeholder="Tell us all about it..."></textarea>
+            <div class="col">
+                <label class="name"><input type="text" id="name" name="name" placeholder="Name(s)" /></label>
+                <div class="ifAttending">
+                    <label class="email"><input type="email" id="email" name="email" placeholder="Email Address"/></label>
+                    <label class="num">Please save me <input type="number" id="number" name="number" /> seat(s).</label>
                 </div>
 
+                <div class="attendingSelection">
+                    <label><input type="radio" name="attending" value="yes, with bells on" class="willAttend"/><span class="main">Will Attend</span><span class="sub">with bells on!</span></label>
+                    <label><input type="radio" name="attending" value="yes, undecided on bells" class="willAttend" /><span class="main">Will Attend</span><span class="sub">undecided on bells</span></label>
+                    <label><input type="radio" name="attending" value="no, heard there'd be bells" class="willNotAttend"/><span class="main">Will Not Attend</span><span class="sub">heard there will be people wearing bells</span></label>
+                    <label><input type="radio" name="attending" value="no, but ringing my bell"  class="willNotAttend" /><span class="main">Will Not Attend</span><span class="sub">will be ringing my bell from afar</span></label>
+                </div>
+            </div>
 
-                <div class="center">
-                    <span>I/We are most agreeable when consuming:</span><br/>
-                    <label class="inline"><input type="checkbox" name="beer" value="yes" class="requirements">Beer</label>
-                    <label class="inline" ><input type="checkbox" name="redwine" value="yes" class="requirements">Red wine</label>
-                    <label class="inline" ><input type="checkbox" name="whitewine" value="yes" class="requirements">White wine</label>
-                    <label class="inline" ><input type="checkbox" name="cider" value="yes" class="requirements">Cider</label>
-                    <label class="inline" ><input type="checkbox" name="nonalcoholic" value="yes" class="requirements">Non Alcoholic</label>
+            <div class="col">
+                <div class="ifAttending">
+                    
+                    <div class="center">
+                        <span>Dietary requirements:</span><br/>
+                        <label class="inline"><input type="radio" name="requirements" value="meat" class="requirements">Meat</label>
+                        <label class="inline" ><input type="radio" name="requirements" value="vegetarian" class="requirements">Vegetarian</label>
+                        <label class="inline" ><input type="radio" name="requirements" value="complicated" class="requirements complicated">It's complicated</label>
+
+                        <textarea name="requirementsextra" placeholder="Tell us all about it..."></textarea>
+                    </div>
+
+                    <div class="center">
+                        <span>How do plan to get there?</span><br>
+                        <input class="hide" type="radio" name="transport" value="">
+                        <label class="inline" title="Make sure you have a designated driver"><input type="radio" name="transport" value="Driving" class="transport">Driving, save me a parking space</label><br>
+                        <label class="inline" title="YAAAAAAY!!"><input type="radio" name="transport" value="Bus Back" class="transport">Wedding Bus, save me <i title="select number attending on the left" class="numSeats">??</i> seat(s)</label><br>
+                        <label class="inline" title="I'm so disorganised" ><input type="radio" name="transport" value="Don't know yet" class="transport">Don't know yet</label><br>
+                    </div>
+
+
+                    <div class="center">
+                        <span>I/We are most agreeable when consuming:</span><br/>
+                        <label class="inline"><input type="checkbox" name="beer" value="yes" class="requirements">Beer</label>
+                        <label class="inline" ><input type="checkbox" name="redwine" value="yes" class="requirements">Red wine</label>
+                        <label class="inline" ><input type="checkbox" name="whitewine" value="yes" class="requirements">White wine</label>
+                        <label class="inline" ><input type="checkbox" name="cider" value="yes" class="requirements">Cider</label>
+                        <label class="inline" ><input type="checkbox" name="nonalcoholic" value="yes" class="requirements">Non Alcoholic</label>
+                    </div>
+
+                    <label class="music center" for="music">
+                        I/We promise to dance if you play
+                        <input type="text" id="music" name="music" />
+                    </label>
+                </div>
+                <div class="notAttending">
+                    <label>
+                        <textarea name="message" placeholder="Optional message"></textarea>
+                    </label>
                 </div>
 
-                <label class="music center" for="music">
-                    I/We promise to dance if you play
-                    <input type="text" id="music" name="music" />
-                </label>
+                <input type="submit" value="Submit" />
             </div>
-            <div class="notAttending">
-                <label>
-                    <textarea name="message" placeholder="Optional message"></textarea>
-                </label>
-            </div>
-
-            <input type="submit" value="Submit" />
-        </div>
-        
-    </form>
+            
+        </form>
     </div>
 
     <img class="footer" src="assets/images/footer.png"></img>
