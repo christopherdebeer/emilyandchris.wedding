@@ -83,7 +83,7 @@ li {
 
 .nav span {
   box-sizing: border-box;
-  padding: 0.5em 0.75em;
+  padding: 0.5em 0.5em;
   font-size: 1.75em;
   display: inline-block;
   font-family: 'Amatic SC', cursive;
@@ -364,6 +364,26 @@ form label .main {
   width: 60%;
   float: right;
   margin-top: -5em;
+}
+
+
+.thingstodo .when {
+  margin-top: -.25em;
+  margin-bottom: 0.25em;
+}
+
+.thingstodo .when span {
+  display: inline;
+  font-family: sans-serif;
+  font-size: 0.8rem;
+  color: white;
+  background-color: #464040;
+  padding: 0.25em 0.5em;
+
+}
+
+.thingstodo .container h2 {
+  margin-bottom: 0;
 }
 
 
