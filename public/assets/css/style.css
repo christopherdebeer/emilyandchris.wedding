@@ -366,6 +366,13 @@ form label .main {
   margin-top: -5em;
 }
 
+.thingstodo .thing {
+  float: left;
+  width: 50%;
+  padding: 0.5em;
+  box-sizing: border-box;
+  text-align: center;
+}
 
 .thingstodo .when {
   margin-top: -.25em;
@@ -388,6 +395,12 @@ form label .main {
 
 
 @media (max-width: 650px) {
+
+  .thingstodo .thing {
+    width: 100%;
+    padding: 0;
+    text-align: left;
+  }
 
   .intro {
     font-family: 'Kurale', serif;
